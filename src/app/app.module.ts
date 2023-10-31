@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,11 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginFormComponent,
     ProfileEditorComponent
   ],
-   imports: [
-    HttpClientModule,
-  ],
   imports: [
     BrowserModule,
+    httpClientModule
     ReactiveFormsModule
   ],
   providers: [],
