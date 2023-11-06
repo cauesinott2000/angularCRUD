@@ -1,31 +1,29 @@
-<div>
-    <mat-card>
-        <form class="example-form">
-            <mat-form-field class="example-full-width">
-              <mat-label>Favorite food</mat-label>
-              <input matInput placeholder="Ex. Pizza" value="Sushi">
-            </mat-form-field>
-          
-            <mat-form-field class="example-full-width">
-              <mat-label>Leave a comment</mat-label>
-              <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-            </mat-form-field>
-          </form>          
-    </mat-card>
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary" class="toolbar">Login Page</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+      <mat-form-field>
+        <input matInput placeholder="Username" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" />
+      </mat-form-field>
+      <button mat-raised-button type="submit">Login</button>
+    </form>
+  </mat-card>
 </div>
 
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label for="user-name">Nome: </label>
+  <input id="user-name" type="text" formControlName="userName" />
 
-    <label for="user-name">Nome: </label>
-    <input id="user-name" type="text" formControlName="userName">
+  <label for="user-email">Email: </label>
+  <input id="user-email" type="text" formControlName="userEmail" />
 
-    <label for="user-email">Email: </label>
-    <input id="user-email" type="text" formControlName="userEmail">
+  <label for="user-password">Senha: </label>
+  <input id="user-password" type="text" formControlName="userPassword" />
 
-    <label for="user-password">Senha: </label>
-    <input id="user-password" type="text" formControlName="userPassword">
-
-    <p>Complete the form to enable button.</p>
-    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
-
-</form>
+  <p>Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+</form> -->
